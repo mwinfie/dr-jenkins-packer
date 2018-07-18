@@ -3,10 +3,10 @@ LABEL maintainer="Matthew Winfield <mwinfie@gmail.com>" \
     version="1.0" \
     description="This Dockerfile creates an image that \
 installs Packer 1.2.4, Vagrant 2.1.2, and Virtualbox 5.2.14 \
-to be used for creating Vagrant boxes that support the \
+to be used as a Jenkins slave for creating Vagrant boxes that support the \
 Virtualbox provider."
 
-# Need root to build image
+# need root to build image
 USER root
 
 # install dev tools
@@ -51,6 +51,6 @@ RUN yum erase -y \
       wget && \
     yum clean all && rm -rf /var/cache/yum/*
 
-# Switch back to user jenkins
+# switch back to user jenkins
 USER $CONTAINER_UID
 VOLUME $VAGRANT_HOME
