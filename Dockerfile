@@ -3,8 +3,8 @@ LABEL maintainer="Matthew Winfield <mwinfie@gmail.com>" \
     version="1.0" \
     description="This Dockerfile creates an image that \
 installs Packer 1.2.4, Vagrant 2.1.2, and Virtualbox 5.2.14 \
-to be used as a Jenkins slave for creating Vagrant boxes that support the \
-Virtualbox provider."
+to be used as a Jenkins slave for creating Vagrant boxes \
+that support the Virtualbox provider."
 
 # need root to build image
 USER root
